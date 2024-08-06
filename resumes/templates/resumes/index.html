@@ -1,0 +1,16 @@
+{% extends "layout/base.html" %} {% block content %}{% load static %}
+<h1>Developers 列表</h1>
+<a href="{% url 'resume:new' %}">新增</a>
+
+<!-- <img src="{% static 'images/IMG_03.JPG' %}" width="300" /> -->
+<ul>
+  {% for item in items %}
+  <li>
+    {{ item.name }}
+    <a href="{% url 'resume:show' item.id %}">{{ item.email }}</a>
+    <a href="{% url 'resume:edit' item.id %}">編輯</a>
+    <a href="{% url 'resume:delete' item.id %}">刪除</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

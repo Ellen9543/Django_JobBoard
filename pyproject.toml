@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pydev"
+version = "0.0.0"
+description = "Job Board for Python"
+authors = ["ellen <wding975@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
